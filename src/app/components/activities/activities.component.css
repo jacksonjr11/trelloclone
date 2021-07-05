@@ -1,0 +1,69 @@
+main#container-tasks {
+    display: flex;
+}
+
+main#container-tasks > div.container-card{
+    height: fit-content;
+    width: fit-content;
+}
+
+main#container-tasks > div.container-card > div.card{
+    height: 78px;
+    width: 272px;
+    background-color: white;
+    margin-left: 8px;
+
+    border-radius: 4px;
+
+    padding: 0 10px;
+}
+
+main#container-tasks > div.container-card > div.card > div.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 40px;
+    
+}
+
+main#container-tasks > div.container-card > div.card > div.header :hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+main#container-tasks > div.container-card > div.card > div.header > input{
+    opacity: 0.8;
+    color: rgba(0, 3, 41, 0.973);
+
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+main#container-tasks > div.container-card > div.card > div.header > i {
+    font-size: 12px;
+    opacity: 0.6;
+
+}
+
+main#container-tasks > div.container-card > div.card > div.content > a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    opacity: 0.6;
+    
+}
+
+main#container-tasks > div.container-card > div.card > div.content :hover{
+    opacity: 1;
+    cursor: pointer;
+}
+main#container-tasks > div.container-card > div.card > div.content > a > div.space > i.icons {
+    font-size: 14px;
+}
+main#container-tasks > div.container-card > div.card > div.content > a > div.space > span{
+    margin-left: 4px;
+    color: rgb(7, 7, 7);
+}

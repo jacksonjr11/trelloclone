@@ -1,0 +1,124 @@
+.subheader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 8px 4px 4px 8px;
+  }
+  
+  .subheader > .container-left {
+    display: flex;
+  }
+  
+  .subheader > .container-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .subheader > div > .sub-trello-box > input{
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    padding: 6px 12px;
+    margin-right: 4px;
+    transition: background-color 0.1s;
+    
+    width: 78px;
+    height: 32px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+  }
+  
+  .subheader > div > .sub-trello-box > input:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .subheader > div > .sub-trello-box > input:focus {
+    background-color: white;
+    color: black;
+  }
+  
+  .subheader > .sub-trello-box > input {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1px;
+  }
+  
+  .subheader > div > .boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    
+    height: 32px;
+    min-width: 32px;
+    
+    padding: 0 6px;
+    border: 0;
+    
+    transition: background-color 0.1s;
+    cursor: pointer;
+    
+
+  }
+  
+  .subheader > div > .boxes:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .subheader > div > .boxes > .icon {
+    color: #FFF;
+    font-size: 10px;
+  }
+  
+  .subheader > div > .boxes > .sub-title {
+    margin: 0 5px 0 5px;
+    color: #FFF;
+    font-size: 14px;
+  }
+  
+  .container-login {
+    display: flex;
+    padding: 4px 0;
+  }
+  
+  .subheader > div > .container-login > .sub-name {
+    background: #DDD;
+    display: flex;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    background-color: orangered;
+    color: white;
+  
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+  
+    cursor: pointer;
+    transition: opacity 0.1s;
+  }
+  
+  .subheader > div > .sub-name:hover {
+    opacity: 0.9;
+  }
+  
+  .subheader > div > .ml-4 {
+    margin-left: 4px;
+  }
+  
+  .subheader > div > .divider {
+    float: left;
+    border-left: 1px solid hsla(0,0%,100%,.24);
+    height: 16px;
+    margin: 8px 8px 12px 8px;
+  }
