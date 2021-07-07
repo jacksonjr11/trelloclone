@@ -1,12 +1,11 @@
 const connection = require('../database/connection');
-
 module.exports = {
   async index(req, res){
     try {
       const list_id = req.headers.authorization;
 
       if(!list_id){
-        return res.status(400).json({error: "this list doesn't exists"});
+        return res.status(400).json({error: "lista não existe"});
       }
 
       const response = await connection('cards')
@@ -28,7 +27,7 @@ module.exports = {
       const { content } = req.body;
 
       if(!list_id){
-        return res.status(401).json({error: "unauthorizated"});
+        return res.status(401).json({error: "não autorizado"});
       }
 
       const insert = await connection('cards')
@@ -50,7 +49,7 @@ module.exports = {
       const { content } = req.body;
 
       if(!id){
-        return res.status(401).json({error: "unauthorizated"});
+        return res.status(401).json({error: "não autorizado"});
       }
 
       const update = await connection('cards')
@@ -60,7 +59,7 @@ module.exports = {
       });
 
       if(!update){
-        return res.status(400).json({error: "this card doesn't exists"});
+        return res.status(400).json({error: "card não existe"});
       }
 
       return res.status(201).send();
@@ -75,7 +74,7 @@ module.exports = {
       const { id } = req.query;
 
       if(!id){
-        return res.status(401).json({error: "unauthorizated"});
+        return res.status(401).json({error: "não autorizado"});
       }
 
       const del = await connection('cards')
@@ -83,7 +82,7 @@ module.exports = {
       .del();
 
       if(!del){
-        return res.status(400).json({error: "this card doesn't exists"});
+        return res.status(400).json({error: "card não existe"});
       }
 
       return res.status(201).send();
