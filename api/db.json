@@ -1,0 +1,38 @@
+{
+  "cards": [
+    {
+      "id": "1",
+      "tittle": "Coisas a fazer",
+      "tasks": [
+        {
+          "id": "1",
+          "name": "Responsividade"
+        },
+        {
+          "id": "1",
+          "name": "Formatação"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "tittle": "Em andamento",
+      "tasks": [
+        {
+          "id": "1",
+          "name": "Backend"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "tittle": "Concluído",
+      "tasks": [
+        {
+          "id": "1",
+          "name": "Frontend"
+        }
+      ]
+    }
+  ]
+}

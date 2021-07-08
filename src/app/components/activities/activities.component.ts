@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CardModel } from 'src/app/models/card_model';
+import { CardService } from 'src/app/service/card.service';
 
 @Component({
   selector: 'app-activities',
@@ -7,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesComponent implements OnInit {
 
-  tittle: string = 'Em andamento'
+  data: any[] = [];
+  tasks: any[] = [];
 
-  constructor() { }
+  constructor(private service: CardService) { }
 
-  ngOnInit(): void {
+  ngOnInit():void {
+    this.requestCard();
   }
 
+  requestCard(){
+    return this.service.infoCard().subscribe((data: CardModel[]) => {
+      console.log(data)
+      this.data = data;
+    });
+  }
 }

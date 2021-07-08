@@ -1,18 +1,24 @@
 <main id="container-tasks">
     <div class="container-card">
-        <div class="card">
+        <div class="card" *ngFor="let card of data">
             <div class="header">
-                <input type="text" [(ngModel)]="tittle">
+                <input type="text" [(ngModel)]="card.tittle">
                 <i class="fas fa-ellipsis-h icons"></i>
             </div>
             <div class="content">
-                <a>
-                    <div class="space">
-                        <i class="fas fa-plus icons"></i>
-                        <span>Adicionar um cartão</span>
-                    </div>
+                <div class="task" *ngFor="let task of card.tasks">
+                    <p *ngIf="task.name">{{task.name}}</p>
+                </div>
+                <div>
+                    <a>
+                        <div class="space">
+                            <i class="fas fa-plus icons"></i>
+                            <span>Adicionar um cartão</span>
+                        </div>
+                    </a>
                     <i class="far fa-credit-card icons"></i>
-                </a>
+
+                </div>
             </div>
         </div>
     </div>
